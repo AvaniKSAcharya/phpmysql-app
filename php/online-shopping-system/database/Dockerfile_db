@@ -3,5 +3,5 @@ ENV MYSQL_DATABASE database
 ENV MYSQL_USER edureka
 ENV MYSQL_PASSWORD admin
 ENV MYSQL_ROOT_PASSWORD root
-RUN mysqld --default-authentication-plugin=mysql_native_password
+CMD ['mysqld', '--default-authentication-plugin=mysql_native_password']
 COPY onlineshop.sql /docker-entrypoint-initdb.d/
