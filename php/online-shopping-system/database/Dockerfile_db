@@ -1,3 +1,7 @@
 FROM mysql:latest
 ENV MYSQL_DATABASE database
+ENV MYSQL_USER edureka
+ENV MYSQL_PASSWORD admin
+ENV MYSQL_ROOT_PASSWORD root
+
 COPY onlineshop.sql /docker-entrypoint-initdb.d/
